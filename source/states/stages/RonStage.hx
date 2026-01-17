@@ -125,6 +125,10 @@ class RonStage extends BaseStage
 			dad.y += 268;
 			dad.x -= 27;
 		}
+		if (curSong.toLowerCase() == 'little-man' && curBeat == 1900 )
+		{
+			spotifyad();
+		}
 	}
 	override function sectionHit()
 	{
@@ -198,6 +202,18 @@ class RonStage extends BaseStage
 		}
 	}
 
+	function spotifyad()
+		{
+			var thx:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('littleman/spotifyad'));
+			thx.updateHitbox();
+			thx.scrollFactor.set(0, 0);
+			thx.antialiasing = true;
+			FlxG.camera.fade(FlxColor.BLACK, 1, false, function()
+			{
+				add(thx);
+				FlxG.camera.fade(FlxColor.BLACK, 1, true);
+			}, true);
+		}
 	// Note Hit/Miss
 	override function goodNoteHit(note:Note)
 	{
