@@ -9,6 +9,11 @@ class HellStage extends BaseStage
 {
 	// If you're moving your stage from PlayState to a stage file,
 	// you might have to rename some variables if they're missing, for example: camZooming -> game.camZooming
+	
+	private var strumLineNotes:FlxTypedGroup<FlxSprite>;
+	private var playerStrums:FlxTypedGroup<FlxSprite>;
+
+	private var health:Float = 1;
 
 	var bobmadshake:FlxSprite;
 	var bobsound:FlxSound;
