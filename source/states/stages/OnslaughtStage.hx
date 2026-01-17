@@ -128,7 +128,8 @@ class OnslaughtStage extends BaseStage
 			if (!FlxG.save.data.shakingscreen)
 				WindowGoBack();
 			VisibleNotes();
-		}	}
+		}
+	}
 	override function sectionHit()
 	{
 		// Code here
@@ -168,6 +169,16 @@ class OnslaughtStage extends BaseStage
 				note.visible = true;
 			}
 	}
+
+	function WindowGoBack()
+		{
+			new FlxTimer().start(0.01, function(tmr:FlxTimer)
+			{
+				var xLerp:Float = FlxMath.lerp(windowX, Lib.application.window.x, 0.95);
+				var yLerp:Float = FlxMath.lerp(windowY, Lib.application.window.y, 0.95);
+				Lib.application.window.move(Std.int(xLerp),Std.int(yLerp));
+			}, 20);
+		}
 
 	override function openSubState(SubState:flixel.FlxSubState)
 	{
@@ -225,7 +236,7 @@ class OnslaughtStage extends BaseStage
 				}
 		}
 	}
-
+	
 	// Note Hit/Miss
 	override function goodNoteHit(note:Note)
 	{
