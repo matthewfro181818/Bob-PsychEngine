@@ -103,26 +103,21 @@ class RonStage extends BaseStage
 			}
 			else if (curBeat == 215)
 			{
-				FlxG.camera.follow(dad, LOCKON, 0.04 * (30 / (cast (Lib.current.getChildAt(0), Main)).getFPS()));
 				FlxTween.tween(FlxG.camera, {zoom: 1.5}, 0.4, {ease: FlxEase.expoOut,});
 				dad.playAnim('cheer', true);
-			}
-			else
-			{
-				FlxG.camera.follow(camFollow, LOCKON, 0.04 * (30 / (cast (Lib.current.getChildAt(0), Main)).getFPS()));
 			}
 		}
 		if (curSong.toLowerCase() == 'little-man' && curBeat == 1397 )
 		{
-			dad = 'pizza';
+			dad.curCharacter == 'pizza';
 		}
 		if (curSong.toLowerCase() == 'little-man' && curBeat == 1497 )
 		{
-			dad = 'little-man';
+			dad.curCharacter == 'little-man';
 		}
 		if (curSong.toLowerCase() == 'little-man' && curBeat == 1844 )
 		{
-			dad = 'tankman';
+			dad.curCharacter == 'tankman';
 			dad.x -= 124;
 			dad.y -= 644;
 			dad.y += 268;
