@@ -12,6 +12,7 @@ class OnslaughtStage extends BaseStage
 	private var strumLineNotes:FlxTypedGroup<FlxSprite>;
 	private var playerStrums:FlxTypedGroup<FlxSprite>;
 
+	private var camZooming:Bool = false;
 	private var curSong:String = "";
 
     var note:Note;
