@@ -10,14 +10,14 @@ class WitheredStage extends BaseStage
 
 	override function create()
 	{
-				var bg:FlxSprite = new FlxSprite(-100).loadGraphic(Paths.image('bob/happysky'));
+				var bg:FlxSprite = new FlxSprite( -100).loadGraphic(Paths.image('bob/slightlyannyoed_sky'));
 				bg.updateHitbox();
 				bg.active = false;
 				bg.antialiasing = true;
 				bg.scrollFactor.set(0.1, 0.1);
 				add(bg);
 				
-				var ground:FlxSprite = new FlxSprite(-537, -158).loadGraphic(Paths.image('bob/happyground'));
+				var ground:FlxSprite = new FlxSprite(-537, -158).loadGraphic(Paths.image('bob/slightlyannyoed_ground'));
 				ground.updateHitbox();
 				ground.active = false;
 				ground.antialiasing = true;
