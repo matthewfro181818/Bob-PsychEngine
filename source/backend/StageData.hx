@@ -110,6 +110,18 @@ class StageData {
 				return 'schoolEvil';
 			case 'ugh' | 'guns' | 'stress':
 				return 'tank';
+			case 'sunshine':
+				return 'sunshine';
+			case 'withered':
+				return 'withered';
+			case 'run':
+				return 'hell';
+			case 'ron' | 'little-man':
+				return 'ron';
+			case 'trouble':
+				return 'trouble';
+			case 'onslaught':
+				return 'slaught';
 		}
 		return 'stage';
 	}
