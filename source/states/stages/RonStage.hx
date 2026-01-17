@@ -108,7 +108,24 @@ class RonStage extends BaseStage
 			{
 				FlxG.camera.follow(camFollow, LOCKON, 0.04 * (30 / (cast (Lib.current.getChildAt(0), Main)).getFPS()));
 			}
-		}	}
+		}
+		if (curSong.toLowerCase() == 'little-man' && curBeat == 1397 )
+		{
+			dad = 'pizza';
+		}
+		if (curSong.toLowerCase() == 'little-man' && curBeat == 1497 )
+		{
+			dad = 'little-man';
+		}
+		if (curSong.toLowerCase() == 'little-man' && curBeat == 1844 )
+		{
+			dad = 'tankman';
+			dad.x -= 124;
+			dad.y -= 644;
+			dad.y += 268;
+			dad.x -= 27;
+		}
+	}
 	override function sectionHit()
 	{
 		// Code here
