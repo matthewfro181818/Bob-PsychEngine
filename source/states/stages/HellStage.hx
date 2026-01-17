@@ -13,6 +13,8 @@ class HellStage extends BaseStage
 	private var strumLineNotes:FlxTypedGroup<FlxSprite>;
 	private var playerStrums:FlxTypedGroup<FlxSprite>;
 
+	private var curSong:String = "";
+
 	private var health:Float = 1;
 
 	var bobmadshake:FlxSprite;
