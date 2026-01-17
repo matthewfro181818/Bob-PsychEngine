@@ -2,11 +2,13 @@ package states.stages;
 
 import states.stages.objects.*;
 import objects.Note;
+import openfl.Lib;
 
 class RonStage extends BaseStage
 {
 	// If you're moving your stage from PlayState to a stage file,
 	// you might have to rename some variables if they're missing, for example: camZooming -> game.camZooming
+	private var curSong:String = "";
 
 	override function create()
 	{
