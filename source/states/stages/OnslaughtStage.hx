@@ -9,8 +9,14 @@ class OnslaughtStage extends BaseStage
 	// If you're moving your stage from PlayState to a stage file,
 	// you might have to rename some variables if they're missing, for example: camZooming -> game.camZooming
 
-  var note:Note;
+	private var strumLineNotes:FlxTypedGroup<FlxSprite>;
+	private var playerStrums:FlxTypedGroup<FlxSprite>;
 
+	private var curSong:String = "";
+
+    var note:Note;
+
+	var SpinAmount:Float = 0;
 	var IsNoteSpinning:Bool = false;
 	var windowX:Float = Lib.application.window.x;
 	var windowY:Float = Lib.application.window.y;
