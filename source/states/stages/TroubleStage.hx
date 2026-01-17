@@ -8,6 +8,8 @@ class TroubleStage extends BaseStage
 	// If you're moving your stage from PlayState to a stage file,
 	// you might have to rename some variables if they're missing, for example: camZooming -> game.camZooming
 
+	private var curSong:String = "";
+
 	override function create()
 	{
 					var bg:FlxSprite = new FlxSprite(-100,10).loadGraphic(Paths.image('bob/nothappy_sky'));
